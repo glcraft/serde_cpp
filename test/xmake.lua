@@ -1,0 +1,8 @@
+target("serde_cpp_test", function() 
+    set_kind("binary")
+    set_languages("c++latest")
+    add_files("src/**.cpp")
+    add_deps("serde_cpp")
+    add_cxxflags("-fexperimental-library")
+    set_policy("build.c++.modules", true)
+end)
